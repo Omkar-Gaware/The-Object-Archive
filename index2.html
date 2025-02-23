@@ -1,0 +1,408 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Object Archive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-cover bg-center h-screen m-0 p-0">
+    <div
+        class="bg-black bg-opacity-50 h-full flex flex-col items-center justify-center text-center text-white px-4 relative">
+        <img alt="Background image of a museum with various artifacts"
+            class="absolute inset-0 w-full h-full object-cover z-0" height="1080"
+            src="https://res.cloudinary.com/dtfptroad/image/upload/v1740336780/Project/secondpage/ax8nqessyhbaf5jkjy5g.png"
+            width="1920" />
+        <header class="absolute top-0 left-0 right-0 p-4 flex justify-between items-center w-full z-10">
+            <div class="flex items-center space-x-2">
+                <img alt="Logo of The Object Archive" class="w-10 h-10" height="40"
+                    src="https://res.cloudinary.com/dtfptroad/image/upload/v1740326801/Project/logonew.png"
+                    width="40" />
+                <span class="text-2xl font-bold">
+                    The Object Archive
+                </span>
+            </div>
+            <nav class="hidden md:flex space-x-4 text-xl">
+                <a class="px-4 py-2 hover:text-gray-300" href="#">
+                    Explore Stories
+                </a>
+                <a class="px-4 py-2 hover:text-gray-300" href="#">
+                    Collection
+                </a>
+                <a class="px-4 py-2 hover:text-gray-300" href="#">
+                    Visit Us
+                </a>
+                <a class="px-4 py-2 hover:text-gray-300" href="#">
+                    Donate
+                </a>
+            </nav>
+            <div class="hidden md:flex space-x-4 ml-16 text-xl">
+                <a class="px-4 py-2 hover:text-gray-300" href="#">
+                    Login
+                </a>
+                <a class="px-4 py-2 hover:text-gray-300" href="#">
+                    Sign Up
+                </a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-white focus:outline-none" id="menu-btn">
+                    <i class="fas fa-bars fa-2x">
+                    </i>
+                </button>
+            </div>
+        </header>
+    </div>
+    
+    <div class="bg-gray-100">
+        <div class="container mx-auto p-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item 1 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Vintage Leica SLR Camera" class="w-full h-48 object-contain rounded-t-lg"
+                        src="https://res.cloudinary.com/dtfptroad/image/upload/v1740338940/Project/secondpage/aa2ok3vihfymojy2qqli.png" />
+                    <div class="p-4">
+                        <span class="text-gray-500">Collection</span>
+
+                        <h2 class="text-xl font-semibold">Wine Bottle</h2>
+                        <p class="text-gray-600">1989, India</p>
+                        <p class="text-gray-600">The Object Archive is a space dedicated to love, loss, and the stories
+                            behind the </p>
+                        <div class="flex justify-between items-center mt-4">
+                            <div class="flex space-x-2">
+                                <i class="far fa-heart text-gray-500"></i>
+                                <i class="fas fa-share text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="A Bottled Ship" class="w-full h-48 object-contain rounded-t-lg"
+                        src="https://res.cloudinary.com/dtfptroad/image/upload/v1740338940/Project/secondpage/maq3iarbj33sidguugha.png" />
+                    <div class="p-4">
+                        <span class="text-gray-500">Collection</span>
+                        <h2 class="text-xl font-semibold">Mercedes-Benz | SLR 300</h2>
+                        <p class="text-gray-600">1955, Denmark</p>
+                        <p class="text-gray-600">The Object Archive is a space dedicated to love, loss, and the stories
+                            behind the objects left behind. Each artifact speaks of </p>
+                        <div class="flex justify-between items-center mt-4">
+                            <div class="flex space-x-2">
+                                <i class="far fa-heart text-gray-500"></i>
+                                <i class="fas fa-share text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Pack Of Cigarette" class="w-full h-48 object-contain rounded-t-lg"
+                        src="https://res.cloudinary.com/dtfptroad/image/upload/v1740338940/Project/secondpage/uwgyl9h7mextapj18bnf.png" />
+                    <div class="p-4">
+                        <span class="text-gray-500">Collection</span>
+                        <h2 class="text-xl font-semibold">Patek Philippe Grandmaster</h2>
+                        <p class="text-gray-600">2015, Monaco</p>
+                        <p class="text-gray-600">The Object Archive is a space dedicated to love, loss, and </p>
+                        <div class="flex justify-between items-center mt-4">
+                            <div class="flex space-x-2">
+                                <i class="far fa-heart text-gray-500"></i>
+                                <i class="fas fa-share text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Letter Box" class="w-full h-48 object-contain rounded-t-lg"
+                        src="https://res.cloudinary.com/dtfptroad/image/upload/v1740338940/Project/secondpage/xwujj9c0rjxaw6kh9yew.png" />
+                    <div class="p-4">
+                        <span class="text-gray-500">Collection</span>
+                        <h2 class="text-xl font-semibold">Leica SLR Camera</h2>
+                        <p class="text-gray-600">1955, Denmark</p>
+                        <p class="text-gray-600">A legendary camera capturing moments in history, holding stories within
+                            its film.</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <div class="flex space-x-2">
+                                <i class="far fa-heart text-gray-500"></i>
+                                <i class="fas fa-share text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Key" class="w-full h-48 object-contain rounded-t-lg"
+                        src="https://res.cloudinary.com/dtfptroad/image/upload/v1740338940/Project/secondpage/zkzgbonlqxds1x0941ci.png" />
+                    <div class="p-4">
+                        <span class="text-gray-500">Collection</span>
+                        <h2 class="text-xl font-semibold">A Bottled Ship </h2>
+                        <p class="text-gray-600">1935, Denmark</p>
+                        <p class="text-gray-600">A delicate artifact of craftsmanship, symbolizing adventure and
+                            maritime nostalgia.</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <div class="flex space-x-2">
+                                <i class="far fa-heart text-gray-500"></i>
+                                <i class="fas fa-share text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Spiked Heels" class="w-full h-48 object-contain rounded-t-lg"
+                        src="https://res.cloudinary.com/dtfptroad/image/upload/v1740338939/Project/secondpage/iuas5i57twpfkadbbphh.png" />
+                    <div class="p-4">
+                        <span class="text-gray-500">Collection</span>
+                        <h2 class="text-xl font-semibold">Pack of Cigarettes</h2>
+                        <p class="text-gray-600">1945, Italy</p>
+                        <p class="text-gray-600">A remnant of old habits, once a companion of moments lost in thought.
+                        </p>
+                        <div class="flex justify-between items-center mt-4">
+
+                            <div class="flex space-x-2">
+                                <i class="far fa-heart text-gray-500"></i>
+                                <i class="fas fa-share text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 7 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Golden Cup" class="w-full h-48 object-contain rounded-t-lg"
+                        src="https://res.cloudinary.com/dtfptroad/image/upload/v1740338939/Project/secondpage/ddlborsojgtr1ejluvvc.png" />
+                    <div class="p-4">
+                        <span class="text-gray-500">Collection</span>
+                        <h2 class="text-xl font-semibold"> Letter Box</h2>
+                        <p class="text-gray-600">1955, Denmark</p>
+                        <p class="text-gray-600">A box once used to hold letters, containing untold messages and
+                            emotions.</p>
+                        <div class="flex justify-between items-center mt-4">
+
+                            <div class="flex space-x-2">
+                                <i class="far fa-heart text-gray-500"></i>
+                                <i class="fas fa-share text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 8 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Blue Velvet Tie" class="w-full h-48 object-contain rounded-t-lg"
+                        src="https://res.cloudinary.com/dtfptroad/image/upload/v1740338938/Project/secondpage/f8vo24xjyfuodj9xsbbm.png" />
+                    <div class="p-4">
+                        <span class="text-gray-500">Collection</span>
+                        <h2 class="text-xl font-semibold">Key </h2>
+                        <p class="text-gray-600">1955, Denmark</p>
+                        <p class="text-gray-600">A mysterious key, possibly unlocking a past lost in time.</p>
+                        <div class="flex justify-between items-center mt-4">
+
+                            <div class="flex space-x-2">
+                                <i class="far fa-heart text-gray-500"></i>
+                                <i class="fas fa-share text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 9 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Antique Gun" class="w-full h-48 object-contain rounded-t-lg"
+                        src="https://res.cloudinary.com/dtfptroad/image/upload/v1740338938/Project/secondpage/basthc3tbjjantaetyds.png" />
+                    <div class="p-4">
+                        <span class="text-gray-500">Collection</span>
+                        <h2 class="text-xl font-semibold"> Spiked Heels</h2>
+                        <p class="text-gray-600">Unknown</p>
+                        <p class="text-gray-600">A statement of fashion and confidence, now an abandoned relic.</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <div class="flex space-x-2">
+                                <i class="far fa-heart text-gray-500"></i>
+                                <i class="fas fa-share text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 10 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Rider Helmet" class="w-full h-48 object-contain rounded-t-lg"
+                        src="https://res.cloudinary.com/dtfptroad/image/upload/v1740338939/Project/secondpage/qsuodu35ibxpruduto3x.png" />
+                    <div class="p-4">
+                        <span class="text-gray-500">Collection</span>
+                        <h2 class="text-xl font-semibold">Golden Cup</h2>
+                        <p class="text-gray-600">1955, Denmark</p>
+                        <p class="text-gray-600">A fine-crafted cup that once held cherished drinks and memories.</p>
+                        <div class="flex justify-between items-center mt-4">
+
+                            <div class="flex space-x-2">
+                                <i class="far fa-heart text-gray-500"></i>
+                                <i class="fas fa-share text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 11 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Berlin Bag" class="w-full h-48 object-contain rounded-t-lg"
+                        src="https://res.cloudinary.com/dtfptroad/image/upload/v1740338939/Project/secondpage/m0xbmvgwefv5r3rlwzbw.png" />
+                    <div class="p-4">
+                        <span class="text-gray-500">Collection</span>
+                        <h2 class="text-xl font-semibold"> Blue Velvet Tie</h2>
+                        <p class="text-gray-600">1985, Germany</p>
+                        <p class="text-gray-600">A stylish accessory, carrying the elegance of a past era.</p>
+                        <div class="flex justify-between items-center mt-4">
+
+                            <div class="flex space-x-2">
+                                <i class="far fa-heart text-gray-500"></i>
+                                <i class="fas fa-share text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 12 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Bicycle" class="w-full h-48 object-contain rounded-t-lg"
+                        src="https://res.cloudinary.com/dtfptroad/image/upload/v1740338939/Project/secondpage/nkuodb9di2uyarrlzzu5.png" />
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold">Antique Gun</h2>
+                        <p class="text-gray-600">1940, Netherlands</p>
+                        <p class="text-gray-600">A vintage bicycle, a reminder of simpler times and the joy of riding
+                            through the countryside.</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-gray-500">Collection</span>
+                            <div class="flex space-x-2">
+                                <i class="far fa-heart text-gray-500"></i>
+                                <i class="fas fa-share text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 13 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Loafers" class="w-full h-48 object-contain rounded-t-lg"
+                        src="https://storage.googleapis.com/a1aa/image/e9QUMvKEXveIKW7JWGSm0_ltmBL81xSomGlIGLKXAh0.jpg" />
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold">Rider Helmet</h2>
+                        <p class="text-gray-600">1965, Italy</p>
+                        <p class="text-gray-600">A pair of classic loafers, a timeless addition to any wardrobe.</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-gray-500">Collection</span>
+                            <div class="flex space-x-2">
+                                <i class="far fa-heart text-gray-500"></i>
+                                <i class="fas fa-share text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 14 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Loafers" class="w-full h-48 object-contain rounded-t-lg"
+                        src="https://res.cloudinary.com/dtfptroad/image/upload/v1740338939/Project/secondpage/i3j976jas2rl2nyrbk3v.png" />
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold">Berkin Bag</h2>
+                        <p class="text-gray-600">1965, Italy</p>
+                        <p class="text-gray-600">A pair of classic loafers, a timeless addition to any wardrobe.</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-gray-500">Collection</span>
+                            <div class="flex space-x-2">
+                                <i class="far fa-heart text-gray-500"></i>
+                                <i class="fas fa-share text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 15 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img alt="Loafers" class="w-full h-48 object-contain rounded-t-lg"
+                        src="https://res.cloudinary.com/dtfptroad/image/upload/v1740338939/Project/secondpage/lxyjghxunmtijjn6qchf.png" />
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold">Bicycle</h2>
+                        <p class="text-gray-600">1965, Italy</p>
+                        <p class="text-gray-600">A pair of classic loafers, a timeless addition to any wardrobe.</p>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-gray-500">Collection</span>
+                            <div class="flex space-x-2">
+                                <i class="far fa-heart text-gray-500"></i>
+                                <i class="fas fa-share text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="bg-[#0D0D0D] text-white">
+        <div class="container mx-auto p-4">
+            <div class="bg-[#0D0D0D] text-white ">
+                <div class="container mx-auto p-4">
+                    <div class="flex justify-between">
+                        <div>
+                            <!-- Header -->
+                            <header class="flex justify-between items-center py-4">
+                                <div class="flex items-center space-x-2 texts">
+                                    <img src="https://res.cloudinary.com/dtfptroad/image/upload/v1740343331/Project/xbrfhjyuxjes032hhdnn.png"
+                                        alt="Logo" class="w-10 h-10" width="40" height="40" />
+                                    <span class="text-xl font-bold">The Object Archive</span>
+                                </div>
+                                <div class="space-x-8">
+                                    <a href="#" class="text-lg">Explore Stories</a>
+                                    <a href="#" class="text-lg">Collection</a>
+                                    <a href="#" class="text-lg">Visit Us</a>
+                                    <a href="#" class="text-lg">More Links</a>
+                                </div>
+                            </header>
+                        </div>
+                        <div>
+                            <!-- Subscription Form -->
+                            <div class="bg-white text-black p-6 rounded-lg shadow-lg">
+                                <h2 class="text-xl font-bold mb-4">Join <i class="fas fa-arrow-right"></i></h2>
+                                <form class="flex space-x-2">
+                                    <input type="email" placeholder="Your email here"
+                                        class="border border-gray-300 p-2 flex-grow" />
+                                    <button type="submit" class="bg-black text-white px-4 py-2">Subscribe</button>
+                                </form>
+                                <p class="text-xs mt-2">
+                                    By subscribing, you accept our <a href="#" class="underline">Privacy Policy</a> and
+                                    <a href="#" class="underline">terms</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Main Content -->
+                    <main class="flex flex-col items-center mt-16">
+                        <img src="https://res.cloudinary.com/dtfptroad/image/upload/v1740343158/Project/edvvp1dbqfi93r7qvsha.png"
+                            alt="Main Image" class="w-full h-auto" />
+                    </main>
+                    <!-- Footer -->
+                    <footer class="mt-16 border-t border-gray-700 pt-4">
+                        <div class="flex justify-between text-sm">
+                            <div class="space-x-4">
+                                <a href="#" class="underline">Privacy Policy</a>
+                                <a href="#" class="underline">Terms of Service</a>
+                                <a href="#" class="underline">Cookies Settings</a>
+                            </div>
+                            <div>© 2024 Relume. All rights reserved.</div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById('menu-btn').addEventListener('click', function () {
+                var menu = document.getElementById('menu');
+                if (menu.classList.contains('hidden')) {
+                    menu.classList.remove('hidden');
+                } else {
+                    menu.classList.add('hidden');
+                }
+            });
+        </script>
+</body>
+
+</html>

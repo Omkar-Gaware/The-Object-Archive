@@ -1,0 +1,29 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+.archiveimg{
+    color: rgb(93, 18, 18) !important; 
+    
+}
+.secondpage{
+    background-color: rgba(234, 203, 203, 0.4) !important;
+}
+.threecolor{
+    color: rgba(18, 37, 161, 0.7);
+}
+.logoimgcolor{
+    background-color: black !important;
+    border-radius: 50% !important;
+}
+.heights{
+    height: 290px !important;
+}
+.objectclor{
+    color: white;
+}
+.texts{
+    margin-right: 15px;
+}
