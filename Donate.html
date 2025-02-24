@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate an Object</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-cover bg-center h-screen" style="background-image: url('https://res.cloudinary.com/dtfptroad/image/upload/v1740350104/Project/axbqkkmlkcnhpsven9nr.png');">
+    <div class="flex items-center justify-center h-full">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md mt-0">
+            <h1 class="text-2xl font-bold mb-4 text-center">Donate an Object</h1>
+            <form>
+                <div class="mb-4">
+                    <label for="storyType" class="block text-sm font-medium text-gray-700">Select Type of Story</label>
+                    <select id="storyType" name="storyType" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option>Friendship</option>
+                        <!-- Add other options as needed -->
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700">Upload Image</label>
+                    <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                        <div class="space-y-1 text-center">
+                            <i class="fas fa-cloud-upload-alt text-3xl text-gray-400"></i>
+                            <div class="flex text-sm text-gray-600">
+                                <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                    <span>Drop here!</span>
+                                    <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                </label>
+                                <p class="pl-1">or upload from file</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="story" class="block text-sm font-medium text-gray-700">Narrate Story</label>
+                    <textarea id="story" name="story" rows="4" class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="w-full bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">Contribute</button>
+                </div>
+                <p class="mt-2 text-xs text-gray-500 text-center">
+                    By registering, you agree to Discord's <a href="#" class="text-indigo-600 hover:text-indigo-500">Terms of Service</a> and <a href="#" class="text-indigo-600 hover:text-indigo-500">Privacy Policy</a>.
+                </p>
+                <p class="mt-2 text-sm text-center">
+                    <a href="#" class="text-indigo-600 hover:text-indigo-500">Already have an account?</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
