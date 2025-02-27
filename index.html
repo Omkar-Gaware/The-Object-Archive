@@ -8,8 +8,28 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
             font-family: 'Roboto', sans-serif;
+
+        }
+
+        .hover-zoom:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hover-card:hover .hover-image {
+            transform: scale(1.05);
+        }
+
+        .hover-card:hover .hover-text {
+            color: #FF4500;
+        }
+
+        .hover-card:hover .hover-bg {
+            background-color: #FFFAF0;
         }
     </style>
     <link rel="stylesheet" href="style.css">
@@ -29,53 +49,40 @@
                     width="40" />
                 <span class="text-2xl font-bold">
                     <a href="index.html">The Object Archive</a>
-                    
                 </span>
             </div>
             <nav class="hidden md:flex space-x-4 text-xl">
-                <a class="px-4 py-2 hover:text-gray-300" href="Explore_Stories.html">
-                    Explore Stories
-                </a>
-                <a class="px-4 py-2 hover:text-gray-300" href="Collections.html">
-                    Collection
-                </a>
-                <a class="px-4 py-2 hover:text-gray-300" href="Visit.html">
-                    Visit Us
-                </a>
-                <a class="px-4 py-2 hover:text-gray-300" href="Donate.html">
-                    Donate
-                </a>
+                <button class="px-4 py-2 hover:text-gray-300" onclick="location.href='Explore_Stories.html'">Explore
+                    Stories</button>
+                <button class="px-4 py-2 hover:text-gray-300"
+                    onclick="location.href='Collections.html'">Collection</button>
+                <button class="px-4 py-2 hover:text-gray-300" onclick="location.href='Visit.html'">Visit Us</button>
+                <button class="px-4 py-2 hover:text-gray-300" onclick="location.href='Donate.html'">Donate</button>
             </nav>
             <div class="hidden md:flex space-x-4 ml-16 text-xl">
-                <a class="px-4 py-2 hover:text-gray-300" href="login.html">
-                    Login
-                </a>
-                <a class="px-4 py-2 hover:text-gray-300" href="signup.html">
-                    Sign Up
-                </a>
+                <button class="px-4 py-2 hover:text-gray-300" onclick="location.href='login.html'">Login</button>
+                <button class="px-4 py-2 hover:text-gray-300" onclick="location.href='signup.html'">Sign Up</button>
             </div>
             <div class="md:hidden">
                 <button class="text-white focus:outline-none" id="menu-btn">
-                    <i class="fas fa-bars fa-2x">
-                    </i>
+                    <i class="fas fa-bars fa-2x"></i>
                 </button>
             </div>
         </header>
         <main class="flex flex-col items-center justify-center space-y-4 z-10">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold">
-                DISCOVER STORIES OF LOVE AND LOSS
-            </h1>
-            <p class="max-w-2xl text-lg md:text-xl">
-                Welcome to the The Object Archive, where each object tells a unique story of love, heartache, and
-                healing. Join us in exploring the emotional journeys behind these cherished artifacts.
-            </p>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold">DISCOVER STORIES OF LOVE AND LOSS</h1>
+            <p class="max-w-2xl text-lg md:text-xl">Welcome to the The Object Archive, where each object tells a unique
+                story of love, heartache, and healing. Join us in exploring the emotional journeys behind these
+                cherished artifacts.</p>
             <div class="space-x-4">
-                <a class="border border-white px-6 py-2 hover:bg-white hover:text-black transition" href="#">
-                    Explore
-                </a>
-                <a class="border border-white px-6 py-2 hover:bg-white hover:text-black transition" href="#">
-                    Donate
-                </a>
+                <button
+                    class="border border-white px-6 py-2 hover:bg-white hover:text-black transition bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold rounded-full shadow-lg transform hover:scale-105 duration-300">
+                    <i class="fas fa-compass mr-2"></i> Explore
+                </button>
+                <button
+                    class="border border-white px-6 py-2 hover:bg-white hover:text-black transition bg-gradient-to-r from-green-500 to-teal-600 text-white font-bold rounded-full shadow-lg transform hover:scale-105 duration-300">
+                    <i class="fas fa-donate mr-2"></i> Donate
+                </button>
             </div>
         </main>
     </div>
@@ -105,29 +112,28 @@
         </div>
         <div class="bg-gradient-to-b from-blue-500 to-blue-700 p-8 text-white">
             <div class="md:flex md:items-start">
-                <div class="md:w-2/3 ">
-                    <h2 class="text-2xl font-bold">
+                <div class="md:w-2/3">
+                    <h2 class="text-2xl font-bold text-brown-800">
                         A HEARTFELT JOURNEY:
                     </h2>
-                    <h3 class="text-xl">
+                    <h3 class="text-xl text-brown-800">
                         The Story Behind a Broken Watch
                     </h3>
-                    <p class="mt-4">
+                    <p class="mt-4 text-white">
                         This watch once belonged to a couple who shared countless memories. Discover how it symbolizes
                         love lost and the bittersweet beauty of their story.
                     </p>
                     <div class="mt-8 flex flex-wrap">
                         <div class="w-full md:w-1/2 p-2">
-                            <div class="bg-white text-black p-4 rounded shadow-lg">
+                            <div class="bg-white text-black p-4 rounded shadow-lg hover-zoom">
                                 <div class="flex items-center mb-4">
                                     <img class="logoimgcolor"
                                         src="https://res.cloudinary.com/dtfptroad/image/upload/v1740326801/Project/logonew.png"
-                                        alt="">
+                                        alt="Logo of the Archive with a vintage design">
                                     <h4 class="ml-2 text-lg font-bold">
                                         KNOW IT FROM THEIR POV
                                     </h4>
                                 </div>
-
                                 <p>
                                     CONNECTING SOULS THESE STORIES PIERCE THROUGH YOUR HEARTS AND MAKE YOU A PART OF ITS
                                     LIFELONG LASTED TALES.
@@ -135,11 +141,11 @@
                             </div>
                         </div>
                         <div class="w-full md:w-1/2 p-2">
-                            <div class="bg-white text-black p-4 rounded shadow-lg">
+                            <div class="bg-white text-black p-4 rounded shadow-lg hover-zoom">
                                 <div class="flex items-center mb-4">
                                     <img class="logoimgcolor"
                                         src="https://res.cloudinary.com/dtfptroad/image/upload/v1740326801/Project/logonew.png"
-                                        alt="">
+                                        alt="Logo of the Archive with a vintage design">
                                     <h4 class="ml-2 text-lg font-bold">
                                         KNOW IT FROM THEIR POV
                                     </h4>
@@ -153,7 +159,8 @@
                     </div>
                 </div>
                 <div class="md:w-1/3 md:ml-8 mt-8 md:mt-0">
-                    <img alt="A collection of vintage clocks and watches" class="w-full rounded shadow-lg" height="600"
+                    <img alt="A collection of vintage clocks and watches" class="w-full rounded shadow-lg hover-zoom"
+                        height="600"
                         src="https://storage.googleapis.com/a1aa/image/h7uePRA3z-pRxyP0FElYPIvgqsBEyJAkX0SGzXSzPn8.jpg"
                         width="400" />
                 </div>
@@ -181,202 +188,259 @@
                 <h2 class="text-4xl font-bold">ATUL PAHTAK</h2>
                 <p class="mt-2 text-lg">is a celebrated artist whose work explores the bridge between music and art
                     narrating societal norms.</p>
-                <button class="mt-4 px-4 py-2 bg-white text-orange-500 font-bold">Explore</button>
+                <button
+                    class="mt-4 px-6 py-3 bg-white text-orange-500 font-bold text-lg rounded-lg hover:bg-orange-500 hover:text-white transition duration-300">Explore</button>
             </div>
         </main>
+        <footer class="bg-gray-200 p-4">
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="text-blue-600"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-blue-600"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-blue-600"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-blue-600"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <!-- <p class="text-center text-sm text-gray-600 mt-4">&copy; 2023 The Archive. All rights reserved.</p> -->
+        </footer>
     </div>
     <!--4th Page -->
-    <div class="bg-[#f4e9db] flex flex-col items-start justify-between min-h-screen">
-        <div class="w-full flex justify-center space-x-4 mt-8 flex-wrap">
+    <div class="bg-[#f4e9db] flex flex-col items-start justify-between min-h-screen font-['Roboto']">
+        <div class="w-full flex justify-center space-x-4 mt-4 flex-wrap">
             <img alt="Decorative image of a conch shell"
-                class="w-40 h-32 sm:w-48 sm:h-40 md:w-56 md:h-48 lg:w-64 lg:h-56"
+                class="w-40 h-32 sm:w-48 sm:h-40 md:w-56 md:h-48 lg:w-64 lg:h-56 transition-transform duration-300 hover:scale-105"
                 src="https://res.cloudinary.com/dtfptroad/image/upload/v1740330713/Project/ocjfeedzyrlwqvfeyb93.png" />
             <img alt="Decorative image of a conch shell"
-                class="w-40 h-32 sm:w-48 sm:h-40 md:w-56 md:h-48 lg:w-64 lg:h-56"
+                class="w-40 h-32 sm:w-48 sm:h-40 md:w-56 md:h-48 lg:w-64 lg:h-56 transition-transform duration-300 hover:scale-105"
                 src="https://res.cloudinary.com/dtfptroad/image/upload/v1740330713/Project/ocjfeedzyrlwqvfeyb93.png" />
             <img alt="Decorative image of a conch shell"
-                class="w-40 h-32 sm:w-48 sm:h-40 md:w-56 md:h-48 lg:w-64 lg:h-56"
+                class="w-40 h-32 sm:w-48 sm:h-40 md:w-56 md:h-48 lg:w-64 lg:h-56 transition-transform duration-300 hover:scale-105"
                 src="https://res.cloudinary.com/dtfptroad/image/upload/v1740330713/Project/ocjfeedzyrlwqvfeyb93.png" />
             <img alt="Decorative image of a conch shell"
-                class="w-40 h-32 sm:w-48 sm:h-40 md:w-56 md:h-48 lg:w-64 lg:h-56"
+                class="w-40 h-32 sm:w-48 sm:h-40 md:w-56 md:h-48 lg:w-64 lg:h-56 transition-transform duration-300 hover:scale-105"
                 src="https://res.cloudinary.com/dtfptroad/image/upload/v1740330713/Project/ocjfeedzyrlwqvfeyb93.png" />
+            <img alt="Decorative image of a conch shell"
+                class="w-40 h-32 sm:w-48 sm:h-40 md:w-56 md:h-48 lg:w-64 lg:h-56 transition-transform duration-300 hover:scale-105"
+                src="https://res.cloudinary.com/dtfptroad/image/upload/v1740330713/Project/ocjfeedzyrlwqvfeyb93.png" />
+            <!-- <img alt="Decorative image of a conch shell" class="w-40 h-32 sm:w-48 sm:h-40 md:w-56 md:h-48 lg:w-64 lg:h-56 transition-transform duration-300 hover:scale-105" src="https://res.cloudinary.com/dtfptroad/image/upload/v1740330713/Project/ocjfeedzyrlwqvfeyb93.png" /> -->
         </div>
-        <div class="flex flex-col items-start justify-center w-full px-8 mb-8 ml-8">
-            <h1 class="text-[#6b7db3] text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold font-['Roboto'] mb-4">
+        <div class="flex flex-col items-start justify-center w-full px-8 mb-8 ml-8 mt-1">
+            <h1 class="text-[#6b7db3] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-2">
                 THE SANGEET ARCHIVE
             </h1>
-            <p class="text-[#6b7db3] text-lg sm:text-xl md:text-2xl mb-8">
+            <p class="text-[#6b7db3] text-lg sm:text-xl md:text-2xl mb-4">
                 14 AUGUST - 26 AUGUST
             </p>
-            <button class="bg-[#6b7db3] text-white px-4 py-2 sm:px-6 sm:py-2 rounded">
+            <button
+                class="bg-[#6b7db3] text-white px-4 py-2 sm:px-6 sm:py-2 rounded transition-transform duration-300 hover:scale-105 hover:bg-[#5a6aa3] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#6b7db3] transform hover:rotate-3 hover:translate-y-1">
                 Explore
             </button>
         </div>
     </div>
     <!-- 5th page  -->
-    <div class="bg-white text-black">
+    <div class="bg-gray-100 ">
         <div class="container mx-auto px-4 py-8">
             <h1 class="text-center text-4xl font-bold mb-8">Explore these stories anytime, anywhere.</h1>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                <div class="text-center">
-                    <img src="https://res.cloudinary.com/dtfptroad/image/upload/v1740333254/Project/5th%20img/jarcxbsnzkyjfe46m5sc.png"
-                        alt="A war artifact" class="w-full h-auto mb-4" />
-                    <h2 class="text-lg font-bold">THE WAR ARCHIVE</h2>
-                    <p class="text-sm">is a celebrated artist whose work explores the bridge between music and art
-                        narrating societal norms.</p>
+                <div
+                    class="text-center bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 hover-card">
+                    <img alt="A war artifact"
+                        class="w-full h-auto mb-4 rounded-lg transition-transform duration-300 hover-image" height="200"
+                        src="https://storage.googleapis.com/a1aa/image/_ecPe6Nt19EFyeKlsGuRkusZI4vzWe2J3hvLGAKFrls.jpg"
+                        width="300" />
+                    <h2 class="text-lg font-bold hover-text">THE WAR ARCHIVE</h2>
+                    <p class="text-sm hover-bg p-2 rounded-lg transition-colors duration-300">is a celebrated artist
+                        whose work explores the bridge between music and art narrating societal norms.</p>
                 </div>
-                <div class="text-center">
-                    <img src="https://res.cloudinary.com/dtfptroad/image/upload/v1740333254/Project/5th%20img/ygajojdfk3qfjjad2bxv.png"
-                        alt="A brass artifact" class="w-full h-auto mb-4" />
-                    <h2 class="text-lg font-bold text-[#8B4513]">THE BRASS ARCHIVE</h2>
-                    <p class="text-sm">is a celebrated artist whose work explores the bridge between music and art
-                        narrating societal norms.</p>
+                <div
+                    class="text-center bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 hover-card">
+                    <img alt="A brass artifact"
+                        class="w-full h-auto mb-4 rounded-lg transition-transform duration-300 hover-image" height="200"
+                        src="https://storage.googleapis.com/a1aa/image/Fja3VocbUHTqxg7jTcEauQlCFt-K5UIn1twKEMQhg7A.jpg"
+                        width="300" />
+                    <h2 class="text-lg font-bold text-[#8B4513] hover-text">THE BRASS ARCHIVE</h2>
+                    <p class="text-sm hover-bg p-2 rounded-lg transition-colors duration-300">is a celebrated artist
+                        whose work explores the bridge between music and art narrating societal norms.</p>
                 </div>
-                <div class="text-center">
-                    <img src="https://res.cloudinary.com/dtfptroad/image/upload/v1740333254/Project/5th%20img/urlkzvrhgchbslygmqxh.png"
-                        alt="A khel artifact" class="w-full h-auto mb-4" />
-                    <h2 class="text-lg font-bold text-[#8B4513]">THE KHEL ARCHIVE</h2>
-                    <p class="text-sm">is a celebrated artist whose work explores the bridge between music and art
-                        narrating societal norms.</p>
+                <div
+                    class="text-center bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 hover-card">
+                    <img alt="A khel artifact"
+                        class="w-full h-auto mb-4 rounded-lg transition-transform duration-300 hover-image" height="200"
+                        src="https://storage.googleapis.com/a1aa/image/tRnBkzeIAZzXSr7JO8VXCCRGo7hU2XGU_MnkVsu-1A8.jpg"
+                        width="300" />
+                    <h2 class="text-lg font-bold text-[#8B4513] hover-text">THE KHEL ARCHIVE</h2>
+                    <p class="text-sm hover-bg p-2 rounded-lg transition-colors duration-300">is a celebrated artist
+                        whose work explores the bridge between music and art narrating societal norms.</p>
                 </div>
-                <div class="text-center">
-                    <img src="https://res.cloudinary.com/dtfptroad/image/upload/v1740333253/Project/5th%20img/axvxxruyytwpmiozdedi.png"
-                        alt="A rasoi artifact" class="w-full h-auto mb-4" />
-                    <h2 class="text-lg font-bold text-[#8B4513]">THE RASOI ARCHIVE</h2>
-                    <p class="text-sm">is a celebrated artist whose work explores the bridge between music and art
-                        narrating societal norms.</p>
+                <div
+                    class="text-center bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 hover-card">
+                    <img alt="A rasoi artifact"
+                        class="w-full h-auto mb-4 rounded-lg transition-transform duration-300 hover-image" height="200"
+                        src="https://storage.googleapis.com/a1aa/image/e6m322I-TjHK5_DZIgsuYCr2UavVkVS8tJ1BxcCOpPQ.jpg"
+                        width="300" />
+                    <h2 class="text-lg font-bold text-[#8B4513] hover-text">THE RASOI ARCHIVE</h2>
+                    <p class="text-sm hover-bg p-2 rounded-lg transition-colors duration-300">is a celebrated artist
+                        whose work explores the bridge between music and art narrating societal norms.</p>
                 </div>
-                <div class="text-center">
-                    <img src="https://res.cloudinary.com/dtfptroad/image/upload/v1740333253/Project/5th%20img/lilczhb7mnyaohobtaik.png"
-                        alt="A gun artifact" class="heights w-full h-50 mb-4" />
-                    <h2 class="text-lg font-bold text-[#8B4513]">THE GUN ARCHIVE</h2>
-                    <p class="text-sm">is a celebrated artist whose work explores the bridge between music and art
-                        narrating societal norms.</p>
+                <div
+                    class="text-center bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 hover-card">
+                    <img alt="A gun artifact"
+                        class="w-full h-auto mb-4 rounded-lg transition-transform duration-300 hover-image" height="200"
+                        src="https://storage.googleapis.com/a1aa/image/hkOmffoQahq9BbtmWzco66v35PfbLz1rqt-wL5oI29c.jpg"
+                        width="300" />
+                    <h2 class="text-lg font-bold text-[#8B4513] hover-text">THE GUN ARCHIVE</h2>
+                    <p class="text-sm hover-bg p-2 rounded-lg transition-colors duration-300">is a celebrated artist
+                        whose work explores the bridge between music and art narrating societal norms.</p>
                 </div>
-                <div class="text-center">
-                    <img src="https://res.cloudinary.com/dtfptroad/image/upload/v1740333253/Project/5th%20img/psanirr2bgqaxusqs2nf.png"
-                        alt="A khel artifact" class="w-full h-auto mb-4" />
-                    <h2 class="text-lg font-bold text-[#8B4513]">THE KHEL ARCHIVE</h2>
-                    <p class="text-sm">is a celebrated artist whose work explores the bridge between music and art
-                        narrating societal norms.</p>
+                <div
+                    class="text-center bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 hover-card">
+                    <img alt="A khel artifact"
+                        class="w-full h-auto mb-4 rounded-lg transition-transform duration-300 hover-image" height="200"
+                        src="https://storage.googleapis.com/a1aa/image/tRnBkzeIAZzXSr7JO8VXCCRGo7hU2XGU_MnkVsu-1A8.jpg"
+                        width="300" />
+                    <h2 class="text-lg font-bold text-[#8B4513] hover-text">THE KHEL ARCHIVE</h2>
+                    <p class="text-sm hover-bg p-2 rounded-lg transition-colors duration-300">is a celebrated artist
+                        whose work explores the bridge between music and art narrating societal norms.</p>
                 </div>
-                <div class="text-center">
-                    <img src="https://res.cloudinary.com/dtfptroad/image/upload/v1740333253/Project/5th%20img/kj5g0eka32htaa1vudsm.png"
-                        alt="A rasoi artifact" class="w-full h-auto mb-4" />
-                    <h2 class="text-lg font-bold text-[#8B4513]">THE RASOI ARCHIVE</h2>
-                    <p class="text-sm">is a celebrated artist whose work explores the bridge between music and art
-                        narrating societal norms.</p>
+                <div
+                    class="text-center bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 hover-card">
+                    <img alt="A rasoi artifact"
+                        class="w-full h-auto mb-4 rounded-lg transition-transform duration-300 hover-image" height="200"
+                        src="https://storage.googleapis.com/a1aa/image/e6m322I-TjHK5_DZIgsuYCr2UavVkVS8tJ1BxcCOpPQ.jpg"
+                        width="300" />
+                    <h2 class="text-lg font-bold text-[#8B4513] hover-text">THE RASOI ARCHIVE</h2>
+                    <p class="text-sm hover-bg p-2 rounded-lg transition-colors duration-300">is a celebrated artist
+                        whose work explores the bridge between music and art narrating societal norms.</p>
                 </div>
-                <div class="text-center">
-                    <img src="https://res.cloudinary.com/dtfptroad/image/upload/v1740333252/Project/5th%20img/khuw6ovbc9kfhuk4aror.png"
-                        alt="A war artifact" class="w-full h-auto mb-4" />
-                    <h2 class="text-lg font-bold text-[#8B4513]">THE WAR ARCHIVE</h2>
-                    <p class="text-sm">is a celebrated artist whose work explores the bridge between music and art
-                        narrating societal norms.</p>
+                <div
+                    class="text-center bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 hover-card">
+                    <img alt="A war artifact"
+                        class="w-full h-auto mb-4 rounded-lg transition-transform duration-300 hover-image" height="200"
+                        src="https://storage.googleapis.com/a1aa/image/_ecPe6Nt19EFyeKlsGuRkusZI4vzWe2J3hvLGAKFrls.jpg"
+                        width="300" />
+                    <h2 class="text-lg font-bold text-[#8B4513] hover-text">THE WAR ARCHIVE</h2>
+                    <p class="text-sm hover-bg p-2 rounded-lg transition-colors duration-300">is a celebrated artist
+                        whose work explores the bridge between music and art narrating societal norms.</p>
                 </div>
-                <div class="text-center">
-                    <img src="https://res.cloudinary.com/dtfptroad/image/upload/v1740333252/Project/5th%20img/ytf1mdnh3zsvb2xiv7gi.png"
-                        alt="A gun artifact" class="w-full h-auto mb-4" />
-                    <h2 class="text-lg font-bold text-[#8B4513]">THE GUN ARCHIVE</h2>
-                    <p class="text-sm">is a celebrated artist whose work explores the bridge between music and art
-                        narrating societal norms.</p>
+                <div
+                    class="text-center bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 hover-card">
+                    <img alt="A gun artifact"
+                        class="w-full h-auto mb-4 rounded-lg transition-transform duration-300 hover-image" height="200"
+                        src="https://storage.googleapis.com/a1aa/image/hkOmffoQahq9BbtmWzco66v35PfbLz1rqt-wL5oI29c.jpg"
+                        width="300" />
+                    <h2 class="text-lg font-bold text-[#8B4513] hover-text">THE GUN ARCHIVE</h2>
+                    <p class="text-sm hover-bg p-2 rounded-lg transition-colors duration-300">is a celebrated artist
+                        whose work explores the bridge between music and art narrating societal norms.</p>
                 </div>
-                <div class="text-center">
-                    <img src="https://res.cloudinary.com/dtfptroad/image/upload/v1740333253/Project/5th%20img/l7j0jvb5kzvg4oyhjr5r.png"
-                        alt="A brass artifact" class="w-full h-auto mb-4" />
-                    <h2 class="text-lg font-bold text-[#8B4513]">THE BRASS ARCHIVE</h2>
-                    <p class="text-sm">is a celebrated artist whose work explores the bridge between music and art
-                        narrating societal norms.</p>
+                <div
+                    class="text-center bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 hover-card">
+                    <img alt="A brass artifact"
+                        class="w-full h-auto mb-4 rounded-lg transition-transform duration-300 hover-image" height="200"
+                        src="https://storage.googleapis.com/a1aa/image/Fja3VocbUHTqxg7jTcEauQlCFt-K5UIn1twKEMQhg7A.jpg"
+                        width="300" />
+                    <h2 class="text-lg font-bold text-[#8B4513] hover-text">THE BRASS ARCHIVE</h2>
+                    <p class="text-sm hover-bg p-2 rounded-lg transition-colors duration-300">is a celebrated artist
+                        whose work explores the bridge between music and art narrating societal norms.</p>
                 </div>
             </div>
         </div>
     </div>
     <div>
         <!-- Image Gallery -->
-        <div class="flex justify-center space-x-4 p-4 bg-gray-100">
-            <img alt="Abstract sculpture with circular shapes" class="w-48 h-48 object-cover" height="200"
-                src="https://res.cloudinary.com/dtfptroad/image/upload/v1740352083/Project/5th%20img/news/qv5n6gkvfeen7tkdtaqw.png"
-                width="200" />
-            <img alt="Sculpture of a rabbit-like figure" class="w-48 h-48 object-cover" height="200"
-                src="https://res.cloudinary.com/dtfptroad/image/upload/v1740352083/Project/5th%20img/news/ljuqf5ys5c6gfdqwp5r8.png"
-                width="200" />
-            <img alt="Abstract white sculpture" class="w-48 h-48 object-cover" height="200"
-                src="https://res.cloudinary.com/dtfptroad/image/upload/v1740352083/Project/5th%20img/news/hln2b5pxvzjhcfsbn2jr.png"
-                width="200" />
-            <img alt="Sculpture of stacked geometric shapes" class="w-48 h-48 object-cover" height="200"
-                src="https://res.cloudinary.com/dtfptroad/image/upload/v1740352083/Project/5th%20img/news/c9zrh9dp31iljlksfsrw.png"
-                width="200" />
-        </div>
-        <div class="bg-[#0D0D0D] text-white">
-            <div class="container mx-auto p-4">
-                <div class="bg-[#0D0D0D] text-white ">
-                    <div class="container mx-auto p-4">
-                        <div class="flex justify-between">
-                            <div>
-                                <!-- Header -->
-                                <header class="flex justify-between items-center py-4">
-                                    <div class="flex items-center space-x-2 texts">
-                                        <img src="https://res.cloudinary.com/dtfptroad/image/upload/v1740343331/Project/xbrfhjyuxjes032hhdnn.png"
-                                            alt="Logo" class="w-10 h-10" width="40" height="40" />
-                                            <a href="index.html"><span class="text-xl font-bold ">The Object Archive</span></a>
-                                        
-                                    </div>
-                                    <div class="space-x-8">
-                                        <a href="Explore_Stories.html" class="text-lg">Explore Stories</a>
-                                        <a href="Collections.html" class="text-lg">Collection</a>
-                                        <a href="Visit.html" class="text-lg">Visit Us</a>
-                                        <a href="index.html" class="text-lg">More Links</a>
-                                    </div>
-                                </header>
-                            </div>
-                            <div>
-                                <!-- Subscription Form -->
-                                <div class="bg-white text-black p-6 rounded-lg shadow-lg">
-                                    <h2 class="text-xl font-bold mb-4">Join <i class="fas fa-arrow-right"></i></h2>
-                                    <form class="flex space-x-2">
-                                        <input type="email" placeholder="Your email here"
-                                            class="border border-gray-300 p-2 flex-grow" />
-                                        <button type="submit" class="bg-black text-white px-4 py-2">Subscribe</button>
-                                    </form>
-                                    <p class="text-xs mt-2">
-                                        By subscribing, you accept our <a href="#" class="underline">Privacy Policy</a>
-                                        and
-                                        <a href="#" class="underline">terms</a>.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Main Content -->
-                        <main class="flex flex-col items-center mt-16">
-                            <img src="https://res.cloudinary.com/dtfptroad/image/upload/v1740343158/Project/edvvp1dbqfi93r7qvsha.png"
-                                alt="Main Image" class="w-full h-auto" />
-                        </main>
-                        <!-- Footer -->
-                        <footer class="mt-16 border-t border-gray-700 pt-4">
-                            <div class="flex justify-between text-sm">
-                                <div class="space-x-4">
-                                    <a href="#" class="underline">Privacy Policy</a>
-                                    <a href="#" class="underline">Terms of Service</a>
-                                    <a href="#" class="underline">Cookies Settings</a>
-                                </div>
-                                <div>© 2024 Relume. All rights reserved.</div>
-                            </div>
-                        </footer>
+        <div class="container mx-auto p-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="relative group">
+                    <img alt="Abstract sculpture with circular shapes"
+                        class="w-full h-90 object-cover rounded-lg shadow-lg transform transition duration-500 group-hover:scale-105"
+                        src="https://res.cloudinary.com/dtfptroad/image/upload/v1740352083/Project/5th%20img/news/qv5n6gkvfeen7tkdtaqw.png" />
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center rounded-lg">
+                        <p class="text-white text-lg font-bold">Abstract Sculpture</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img alt="Sculpture of a rabbit-like figure"
+                        class="w-full h-90 object-cover rounded-lg shadow-lg transform transition duration-500 group-hover:scale-105"
+                        src="https://res.cloudinary.com/dtfptroad/image/upload/v1740352083/Project/5th%20img/news/ljuqf5ys5c6gfdqwp5r8.png" />
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center rounded-lg">
+                        <p class="text-white text-lg font-bold">Rabbit Sculpture</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img alt="Abstract white sculpture"
+                        class="w-full h-90 object-cover rounded-lg shadow-lg transform transition duration-500 group-hover:scale-105"
+                        src="https://res.cloudinary.com/dtfptroad/image/upload/v1740352083/Project/5th%20img/news/hln2b5pxvzjhcfsbn2jr.png" />
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center rounded-lg">
+                        <p class="text-white text-lg font-bold">White Sculpture</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img alt="Sculpture of stacked geometric shapes"
+                        class="w-full h-90 object-cover rounded-lg shadow-lg transform transition duration-500 group-hover:scale-105"
+                        src="https://res.cloudinary.com/dtfptroad/image/upload/v1740352083/Project/5th%20img/news/c9zrh9dp31iljlksfsrw.png" />
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center rounded-lg">
+                        <p class="text-white text-lg font-bold">Geometric Sculpture</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="bg-[#0D0D0D] text-white font-roboto">
+            <div class="container mx-auto p-4">
+                <header class="flex justify-between items-center py-4">
+                    <div class="flex items-center space-x-2">
+                        <img src="https://res.cloudinary.com/dtfptroad/image/upload/v1740343331/Project/xbrfhjyuxjes032hhdnn.png"
+                            alt="Logo of The Object Archive" class="w-10 h-10" width="40" height="40" />
+                        <a href="index.html" class="text-xl font-bold">The Object Archive</a>
+                    </div>
+                    <nav class="space-x-8">
+                        <a href="Explore_Stories.html" class="text-lg hover:text-gray-400 transition">Explore
+                            Stories</a>
+                        <a href="Collections.html" class="text-lg hover:text-gray-400 transition">Collection</a>
+                        <a href="Visit.html" class="text-lg hover:text-gray-400 transition">Visit Us</a>
+                        <a href="index.html" class="text-lg hover:text-gray-400 transition">More Links</a>
+                    </nav>
+                </header>
+
+                <div class="flex justify-between items-center mt-8">
+                    <div class="bg-white text-black p-6 rounded-lg shadow-lg w-full max-w-md">
+                        <h2 class="text-xl font-bold mb-4">Join <i class="fas fa-arrow-right"></i></h2>
+                        <form class="flex space-x-2">
+                            <input type="email" placeholder="Your email here"
+                                class="border border-gray-300 p-2 flex-grow rounded" />
+                            <button type="submit" class="bg-black text-white px-4 py-2 rounded">Subscribe</button>
+                        </form>
+                        <p class="text-xs mt-1">
+                            By subscribing, you accept our <a href="#" class="underline">Privacy Policy</a> and <a
+                                href="#" class="underline">terms</a>.
+                        </p>
+                    </div>
+                </div>
+
+                <main class="flex flex-col items-center mt-10">
+                    <img src="https://res.cloudinary.com/dtfptroad/image/upload/v1740343158/Project/edvvp1dbqfi93r7qvsha.png"
+                        alt="Main image showcasing various objects in the archive"
+                        class="w-full h-auto rounded-lg shadow-lg" />
+                </main>
+
+                <footer class="mt-10 border-t border-gray-700 pt-4">
+                    <div class="flex justify-between text-sm">
+                        <div class="space-x-4">
+                            <a href="#" class="underline hover:text-gray-400 transition">Privacy Policy</a>
+                            <a href="#" class="underline hover:text-gray-400 transition">Terms of Service</a>
+                            <a href="#" class="underline hover:text-gray-400 transition">Cookies Settings</a>
+                        </div>
+                        <div>© 2024 Relume. All rights reserved.</div>
+                    </div>
+                </footer>
+            </div>
+        </div>
     </div>
 
     <script>
         document.getElementById('menu-btn').addEventListener('click', function () {
-            var menu = document.getElementById('menu');
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-            } else {
-                menu.classList.add('hidden');
-            }
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('hidden');
         });
     </script>
 </body>

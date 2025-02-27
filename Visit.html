@@ -3,36 +3,37 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body class="bg-cover bg-center h-screen" style="background-image: url('https://res.cloudinary.com/dtfptroad/image/upload/v1740350104/Project/axbqkkmlkcnhpsven9nr.png');">
-    <div class="flex items-center justify-center h-full py-12">
+<body class="bg-cover bg-center h-screen">
+    <img src="https://res.cloudinary.com/dtfptroad/image/upload/v1740350104/Project/axbqkkmlkcnhpsven9nr.png" alt="Background image of a serene landscape with mountains and a lake" class="absolute inset-0 w-full h-full object-cover z-0">
+    <div class="flex items-center justify-center h-full py-12 relative z-10">
         <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
             <h2 class="text-2xl font-semibold mb-6 text-center">Donate an Object</h2>
-            <form>
+            <form id="donation-form">
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email" required>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="display-name">Display Name</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="display-name" type="text" placeholder="Display Name">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="display-name" type="text" placeholder="Display Name" required>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username" required>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Password">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Password" minlength="8" maxlength="16" required>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="confirm-password">Confirm Password</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="confirm-password" type="password" placeholder="Confirm Password">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="confirm-password" type="password" placeholder="Confirm Password" minlength="8" maxlength="16" required>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="dob">Date of Birth</label>
                     <div class="flex space-x-2">
-                        <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="dob-month">
-                            <option>Month</option>
+                        <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="dob-month" required>
+                            <option value="">Month</option>
                             <option>January</option>
                             <option>February</option>
                             <option>March</option>
@@ -46,18 +47,18 @@
                             <option>November</option>
                             <option>December</option>
                         </select>
-                        <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="dob-day">
-                            <option>Day</option>
-                            ${Array.from({ length: 31 }, (_, i) => `<option></option>`).join('')}
+                        <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="dob-day" required>
+                            <option value="">Day</option>
+                            ${Array.from({ length: 31 }, (_, i) => `<option>${i + 1}</option>`).join('')}
                         </select>
-                        <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="dob-year">
-                            <option>Year</option>
-                            ${Array.from({ length: 100 }, (_, i) => `<option></option>`).join('')}
+                        <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="dob-year" required>
+                            <option value="">Year</option>
+                            ${Array.from({ length: 100 }, (_, i) => `<option>${new Date().getFullYear() - i}</option>`).join('')}
                         </select>
                     </div>
                 </div>
                 <div class="mb-4">
-                    <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline" type="button">
+                    <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline" type="submit">
                         Continue
                     </button>
                 </div>
@@ -70,5 +71,11 @@
             </form>
         </div>
     </div>
+    <script>
+        document.getElementById('donation-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'https://example.com/thank-you';
+        });
+    </script>
 </body>
 </html>
